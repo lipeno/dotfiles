@@ -25,13 +25,12 @@
 - Skype
 - VLC
 - iTerm2
+enable "load preferences from user-defined folder" -> "/Dropbox/Development/dotfiles
+Preferences -> Colors -> Load Presets -> Solarized Dark
 - Xcode
- 
-Open XCode at least once and install the command line tools: Preferences -> Downloads
-In iterm2:
-
-   enable "load preferences from user-defined folder" -> "/Dropbox/Development/dotfiles
-   Preferences -> Colors -> Load Presets -> Solarized Dark
+Open XCode and install the command line tools or run command "xcode-select --install"
+- Magic Prefs
+enable Middle click
 
 Install homebrew:
   /usr/bin/ruby -e $(curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)
