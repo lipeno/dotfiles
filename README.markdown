@@ -21,7 +21,7 @@
 - Chrome
 - Dropbox
 - F.lux
-- Navicat
+- Induction
 - Skype
 - VLC
 - iTerm2
