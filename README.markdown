@@ -33,3 +33,26 @@
   - enable Middle click
 - homebrew
   - /usr/bin/ruby -e $(curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)
+  - rub "brew doctor" to check if it was installed
+- rvm + ruby on rails
+  - https://get.rvm.io | bash -s stable --rails --autolibs=enable
+- git
+  - brew install postgresql
+
+## Install Postgresql
+Make sure brew version of Postgres is in your path. It should be /usr/local/bin/initdb.
+
+    brew install postgresql
+    which initdb
+
+Initialize Postgres database directory:
+
+    initdb /usr/local/var/postgres -E utf8
+
+Start postgres on boot/login and start it now:
+
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+Set yourself as a superuser
+
+    createuser -s <your username>
