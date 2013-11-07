@@ -38,6 +38,8 @@
   - https://get.rvm.io | bash -s stable --rails --autolibs=enable
 - git
   - brew install postgresql
+- Sublime Text 3
+  - then symlink it "ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl"
 
 ## Install Postgresql
 Make sure brew version of Postgres is in your path. It should be /usr/local/bin/initdb.
