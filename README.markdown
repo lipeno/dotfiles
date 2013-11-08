@@ -37,7 +37,10 @@
 - rvm + ruby on rails
   - https://get.rvm.io | bash -s stable --rails --autolibs=enable
 - git
-  - brew install postgresql
+  - brew install git
+- git auto complete
+  - curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+  - echo "source ~/.git-completion.bash" >> ~/.bash_profile
 - Sublime Text 3
   - then symlink it "ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl"
 
