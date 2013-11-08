@@ -1,10 +1,110 @@
 [user]
-	email = andrejdragisic@gmail.com
 	name = Andrej Dragisic
+	email = andrejdragisic@gmail.com
+[alias]
+        co = checkout
+        co- = checkout -
+        cob = checkout -b
+        cot = checkout --track
+        com = checkout master
+        cos = checkout staging
+
+        b = branch
+        bd = branch -d
+        bdd = branch -D
+        bc = branch --contains  # + commit
+
+        rb = rebase
+        rbm = rebase master
+        rbs = rebase staging
+        rbc = rebase --continue
+        rbi = rebase -i
+        m = merge
+        mt = mergetool -y
+        rmc = rm --cached   # rm file from index
+
+  		# stash
+        st = stash
+        sts = stash save # plus text msg
+        stl = stash list
+        sta = stash apply
+
+        # commits
+        x = commit
+        xm = commit -m
+        xam = commit -a -m
+        amend = commit --amend
+        amendc = commit --amend -C HEAD   # reuse last commit msg
+
+        s = status -sb
+        ss = status
+
+        # working vs staged/commit
+        d = diff
+        # staged vs commit
+        dc = diff --cached
+        # diff on a word level
+        wd = diff --word-diff
+        wdc = diff --word-diff --cached
+        # just changed file output
+        # = --name-status
+        # get commit files
+        df = diff-tree --no-commit-id --name-only -r
+
+        # remote repo
+        f = fetch
+        pl = pull
+        plrb = pull --rebase
+        r = remote
+        #re = remote
+
+        rs = reset
+        rsh = reset --hard
+        rsm = reset --mixed
+        rss = reset --soft
+
+        ps = push
+        psf = push --force
+        psa = push --all
+        psall = push --all
+
+  		# create remote branch w/ same name as current branch   # git push -u origin some-branch
+        psb = !sh -c "\"git push -u `if [[ -z "$1" ]]; then echo 'origin'; else echo $1; fi` `git rev-parse --abbrev-ref HEAD`\""
+  		# delete remote branch w/ same name as current branch   # git push origin :some-branch
+        psbd = !sh -c "\"git push `if [[ -z "$1" ]]; then echo 'origin'; else echo $1; fi` :`git rev-parse --abbrev-ref HEAD`\""
+
+        cp = cherry-pick
+        a = add
+        all = add .
+        al = add .
+        aa = add -A
+        # choose hunks to add (interactive)
+        ap = add --patch
+
+        # log
+        l = log
+       	ldeco = log --oneline --decorate
+
+        last = log -1 HEAD
+        # search commit messages
+        lg = !sh -c "\"git log --grep="$1" \""
+        # pickaxe - seach commit diffs
+        ls = !sh -c "\"git log -S"$1" \""
+        # pretty log
+        lp = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --graph
+        lp10 = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --graph -10
+        lpa = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --graph --all
+        lpa10 = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --graph --all -10
+
+        # gives human readable output of any commit sha
+        human = name-rev --name-only --refs=refs/heads/*
+[core]
+	excludesfile = /Users/korisnik/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [branch]
 	autosetuprebase = always
-[mergetool "sublime"]
-	cmd = subl -w $MERGED
-	trustExitCode = false
-[merge]
-	tool = sublime
