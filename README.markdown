@@ -43,6 +43,7 @@
   - echo "source ~/.git-completion.bash" >> ~/.bash_profile
 - Sublime Text 3
   - then symlink it "ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl"
+- Heroku Toolbelt
 
 ## Install Postgresql
 Make sure brew version of Postgres is in your path. It should be /usr/local/bin/initdb.
