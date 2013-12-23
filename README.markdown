@@ -62,3 +62,17 @@ Start postgres on boot/login and start it now:
 Set yourself as a superuser
 
     createuser -s <your username>
+
+## Dotfiles
+
+Based on http://barryclark.co/creating-bashstrap/ (https://github.com/barryclark/bashstrap)
+
+**Features:**
+- Open your current directory in Sublime Text (with just 2 characters)
+- Jump directories rapidly, without having to set aliases—using Z (my favorite feature!)
+- Tab bar displays your current directory
+- Git branch status inline
+- ☠ ahoy! An easily customizable symbol 
+- Stripped out extraneous text 	
+- Colored 'ls'
+- Syntax highlighted 'cat'
