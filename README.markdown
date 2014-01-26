@@ -22,6 +22,7 @@
 - Dropbox
 - F.lux
 - Induction
+- Flycut
 - Skype
 - VLC
 - iTerm2
