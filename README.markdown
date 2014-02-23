@@ -23,6 +23,7 @@
 - F.lux
 - Induction
 - Flycut
+- Right Zoom
 - Skype
 - VLC
 - iTerm2
