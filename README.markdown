@@ -22,6 +22,7 @@
 - Dropbox
 - F.lux
 - Induction
+- Spectacle
 - Flycut
 - Right Zoom
 - Skype
