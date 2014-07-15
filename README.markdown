@@ -25,6 +25,7 @@
 - Spectacle
 - Flycut
 - Right Zoom
+- launchrocket (https://github.com/jimbojsb/launchrocket/releases)
 - Skype
 - VLC
 - iTerm2
