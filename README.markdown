@@ -45,27 +45,12 @@
 - git auto complete
   - curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
   - echo "source ~/.git-completion.bash" >> ~/.bash_profile
-- Sublime Text 3
-  - then symlink it "ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl"
+- Sublime Text 3, Atom
+  - then symlink it like "ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl"
+- PostgreSQL
+  - install http://postgresapp.com/
 - Heroku Toolbelt
 
-## Install Postgresql
-Make sure brew version of Postgres is in your path. It should be /usr/local/bin/initdb.
-
-    brew install postgresql
-    which initdb
-
-Initialize Postgres database directory:
-
-    initdb /usr/local/var/postgres -E utf8
-
-Start postgres on boot/login and start it now:
-
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
-
-Set yourself as a superuser
-
-    createuser -s <your username>
 
 ## Dotfiles
 
